@@ -5,7 +5,7 @@ namespace ProjectilesBeGone.Source.Common.Projectiles
 {
     public class ProjectileAlpha : GlobalProjectile
     {
-        internal enum ProjMode : byte
+        public enum ProjMode : byte
         {
             All,
             HostileAndYours,
@@ -13,7 +13,7 @@ namespace ProjectilesBeGone.Source.Common.Projectiles
             None
         }
 
-        private static ProjMode mode = ProjMode.HostileAndYours;
+        public static ProjMode mode = ProjMode.HostileAndYours;
 
         public override void AI(Projectile projectile)
         {
