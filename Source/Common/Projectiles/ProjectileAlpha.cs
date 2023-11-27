@@ -5,9 +5,23 @@ namespace ProjectilesBeGone.Source.Common.Projectiles
 {
     public class ProjectileAlpha : GlobalProjectile
     {
-        public override void SetDefaults(Projectile entity)
+        internal enum ProjMode : byte
         {
-            entity.hide = true;
+            All,
+            HostileAndYours,
+            Hostile,
+            None
+        }
+
+        private static ProjMode mode = ProjMode.HostileAndYours;
+
+        public override void AI(Projectile projectile)
+        {
+            if (mode == ProjMode.None ||
+               (mode == ProjMode.Hostile && !projectile.hostile) ||
+               (mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)) {
+                projectile.hide = true;
+            }
         }
     }
 }
