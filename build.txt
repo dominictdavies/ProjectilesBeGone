@@ -1,0 +1,3 @@
+displayName = Projectiles Be Gone
+author = Doomimic
+version = 0.1
