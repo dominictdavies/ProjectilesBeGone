@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace ProjectilesBeGone.Source.Common.Projectiles
 {
-    public class ProjectileAlpha : GlobalProjectile
+    public class ProjectileVisibility : GlobalProjectile
     {
         public enum ProjMode : byte
         {
