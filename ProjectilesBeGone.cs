@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace ProjectilesBeGone.Source
+namespace ProjectilesBeGone
 {
     public class ProjectilesBeGone : Mod
     {

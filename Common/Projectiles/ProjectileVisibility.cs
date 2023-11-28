@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace ProjectilesBeGone.Source.Common.Projectiles
+namespace ProjectilesBeGone.Common.Projectiles
 {
     public class ProjectileVisibility : GlobalProjectile
     {
@@ -18,8 +18,9 @@ namespace ProjectilesBeGone.Source.Common.Projectiles
         public override void AI(Projectile projectile)
         {
             if (Mode == ProjMode.None ||
-               (Mode == ProjMode.Hostile && !projectile.hostile) ||
-               (Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)) {
+               Mode == ProjMode.Hostile && !projectile.hostile ||
+               Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)
+            {
                 projectile.hide = true;
             }
         }
