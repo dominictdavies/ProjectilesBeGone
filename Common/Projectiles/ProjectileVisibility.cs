@@ -17,10 +17,15 @@ namespace ProjectilesBeGone.Common.Projectiles
 
         public override void AI(Projectile projectile)
         {
+            ModLoader.TryGetMod("ReviveMod", out Mod reviveMod);
+            reviveMod.TryFind("ReviveAura", out ModProjectile reviveAura);
+            if (projectile.type == reviveAura.Type) {
+                return;
+            }
+
             if (Mode == ProjMode.None ||
                Mode == ProjMode.Hostile && !projectile.hostile ||
-               Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)
-            {
+               Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer) {
                 projectile.hide = true;
             }
         }
