@@ -5,7 +5,7 @@ namespace ProjectilesBeGone.Common.Systems
 {
     public class DustVisibility : ModSystem
     {
-        public static bool HideDust { get; set; } = true;
+        public static bool HideDust { get; set; } = false;
 
         public override void PreUpdateDusts()
         {
