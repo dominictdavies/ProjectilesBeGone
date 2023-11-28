@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace ProjectilesBeGone.Source.Common.Dusts
+namespace ProjectilesBeGone.Source.Common.Systems
 {
     public class DustVisibility : ModSystem
     {
