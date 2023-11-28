@@ -1,1 +1,12 @@
-Projectiles Be Gone is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+-=- Projectiles Be Gone -=-
+
+Sick of projectiles constantly cluttering up your screen? Can't make out hostile projectiles because you and your friends are using insanely over the top weapons?
+This mod allows you to show only the projectiles that matter to you.
+
+Through the /projMode command you are able to pick between 4 visibility settings: showing all projectiles, hostile and your projectiles, just hostile projectiles, or no projectiles at all.
+The /hideDust command allows you to also completely remove any dust that is created from your weapons to allow for a completely clutter free experience.
+
+= Changelog =
+
+v0.1:
+- Initial release

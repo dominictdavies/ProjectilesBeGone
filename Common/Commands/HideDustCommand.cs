@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using ProjectilesBeGone.Source.Common.Systems;
+using ProjectilesBeGone.Common.Systems;
 using Terraria.ModLoader;
 
-namespace ReviveMod.Source.Common.Commands
+namespace ProjectilesBeGone.Common.Commands
 {
     public class HideDustCommand : ModCommand
     {

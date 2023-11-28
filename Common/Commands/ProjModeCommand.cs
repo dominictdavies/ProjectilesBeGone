@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
-using ProjectilesBeGone.Source.Common.Projectiles;
+using ProjectilesBeGone.Common.Projectiles;
 using Terraria.ModLoader;
 
-namespace ReviveMod.Source.Common.Commands
+namespace ProjectilesBeGone.Common.Commands
 {
     public class ProjModeCommand : ModCommand
     {
@@ -24,26 +24,37 @@ namespace ReviveMod.Source.Common.Commands
 
         public override void Action(CommandCaller caller, string input, string[] args)
         {
-            if (args.Length != 1) {
+            if (args.Length != 1)
+            {
                 throw new UsageException("Expected exactly 1 argument.");
             }
 
-            if (!int.TryParse(args[0], out int modeIndex)) {
+            if (!int.TryParse(args[0], out int modeIndex))
+            {
                 throw new UsageException("Expected a number.");
             }
 
             ProjectileVisibility.Mode = (ProjectileVisibility.ProjMode)modeIndex;
 
             string reply = "Set projectile visibility to {0}.";
-            if (modeIndex == 0) {
+            if (modeIndex == 0)
+            {
                 reply = string.Format(reply, "all");
-            } else if (modeIndex == 1) {
+            }
+            else if (modeIndex == 1)
+            {
                 reply = string.Format(reply, "hostile and your own");
-            } else if (modeIndex == 2) {
+            }
+            else if (modeIndex == 2)
+            {
                 reply = string.Format(reply, "hostile");
-            } else if (modeIndex == 3) {
+            }
+            else if (modeIndex == 3)
+            {
                 reply = string.Format(reply, "none");
-            } else {
+            }
+            else
+            {
                 throw new UsageException("Expected a number from 0 to 3.");
             }
 
