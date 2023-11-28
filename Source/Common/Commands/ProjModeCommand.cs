@@ -32,7 +32,7 @@ namespace ReviveMod.Source.Common.Commands
                 throw new UsageException("Expected a number.");
             }
 
-            ProjectileVisibility.mode = (ProjectileVisibility.ProjMode)modeIndex;
+            ProjectileVisibility.Mode = (ProjectileVisibility.ProjMode)modeIndex;
 
             string reply = "Set projectile visibility to {0}.";
             if (modeIndex == 0) {
