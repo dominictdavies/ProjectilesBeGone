@@ -13,13 +13,14 @@ namespace ProjectilesBeGone.Common.Projectiles
             None
         }
 
+        public static bool BossActive { get; set; } = true;
         public static ProjMode Mode { get; set; } = ProjMode.HostileAndYours;
 
         public override void AI(Projectile projectile)
         {
             ModLoader.TryGetMod("ReviveMod", out Mod reviveMod);
             reviveMod.TryFind("ReviveAura", out ModProjectile reviveAura);
-            if (projectile.type == reviveAura.Type) {
+            if (projectile.type == reviveAura.Type || (BossActive && !Main.CurrentFrameFlags.AnyActiveBossNPC)) {
                 return;
             }
 
