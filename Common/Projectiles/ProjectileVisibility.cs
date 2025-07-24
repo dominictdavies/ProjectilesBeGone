@@ -13,8 +13,8 @@ namespace ProjectilesBeGone.Common.Projectiles
             None
         }
 
-        public static bool BossActive { get; set; } = true;
         public static ProjMode Mode { get; set; } = ProjMode.HostileAndYours;
+        public static bool BossActive { get; set; } = true;
 
         private static int? _reviveAuraType;
         private static bool IsReviveAura(int projectileType)
@@ -33,9 +33,9 @@ namespace ProjectilesBeGone.Common.Projectiles
                 return;
             }
 
-            if (Mode == ProjMode.None ||
-               Mode == ProjMode.Hostile && !projectile.hostile ||
-               Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer) {
+            if ((Mode == ProjMode.None) ||
+               (Mode == ProjMode.Hostile && !projectile.hostile) ||
+               (Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)) {
                 projectile.hide = true;
             }
         }
