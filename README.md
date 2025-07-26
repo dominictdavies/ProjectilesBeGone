@@ -9,6 +9,11 @@ The /hideDust command allows you to also completely remove any dust that is crea
 
 ## Recent Changes
 
+v0.1.3:
+
+- Fixed a major issue where the mod was only functioning while being used with the Revive Mod
+- Updated description and workshop formatting
+
 v0.1.2:
 
 - Mod is only active when bossActive is true
@@ -16,7 +21,3 @@ v0.1.2:
 v0.1.1:
 
 - Added compatability with the Revive Mod, revive auras will be visible at all times
-
-v0.1:
-
-- Initial release
