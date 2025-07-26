@@ -34,8 +34,8 @@ namespace ProjectilesBeGone.Common.Projectiles
             }
 
             if ((Mode == ProjMode.None) ||
-               (Mode == ProjMode.Hostile && !projectile.hostile) ||
-               (Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)) {
+                (Mode == ProjMode.Hostile && !projectile.hostile) ||
+                (Mode == ProjMode.HostileAndYours && !projectile.hostile && projectile.owner != Main.myPlayer)) {
                 projectile.hide = true;
             }
         }
