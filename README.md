@@ -1,24 +1,22 @@
-# Revive Mod
+# Projectiles Be Gone
 
-This is a multiplayer mod that makes it possible to revive other players in servers.
-Upon death, players will leave an aura where they died that others can enter in order to revive the player.
-As a way to balance respawn chaining when fighting bosses, this mod disables regular respawning during boss fights, forcing remaining players to revive others.
+Sick of projectiles constantly cluttering up your screen? Can't make out hostile projectiles because you and your friends are using insanely over the top weapons?
+This mod allows you to show only the projectiles that matter to you.
 
-This mod also functions with hardcore players. Those that are dead will not naturally respawn, instead requiring a revival from another hardcore player.
-Once all hardcore players are dead, players will respawn as ghosts and their saves will be deleted.
-
-Use the "Pause Respawn Timer" keybind (P by default) to give others more time to revive you.
-Config options allow you to alter the balancing of this mod, such as how long it takes to revive others and the speed at which auras may move.
+By default this mod is only active during boss fights, this can be altered using the /bossActive command.
+By calling the /projMode command with a number from 0 to 3, you are able to pick between the following visibility settings: showing all projectiles, hostile and your projectiles, just hostile projectiles, or no projectiles at all.
+The /hideDust command allows you to also completely remove any dust that is created from your weapons to allow for a completely clutter free experience.
 
 ## Recent Changes
 
-v0.3.3:
-- Added 'Hardcore Respawn Timers Wait' config option
-- Added 'Bosses Pause Respawn Timers' config option
-- Fixed a bug where Eater of Worlds was not considered as a boss
+v0.1.2:
 
-v0.3.2:
-- Added 'Allow Timer Pausing' config option
+- Mod is only active when bossActive is true
 
-v0.3.1:
-- Fixed hardcore players still being deleted even after a revive
+v0.1.1:
+
+- Added compatability with the Revive Mod, revive auras will be visible at all times
+
+v0.1:
+
+- Initial release
